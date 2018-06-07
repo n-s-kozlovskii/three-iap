@@ -41,7 +41,7 @@ class Premutation:
 		return self._data[key-1]
 
 	def __str__(self):
-			return self._str_repesentation
+		return self._str_repesentation
 
 	def __mul__(self, other):
 		assert len(self) == len(other)
