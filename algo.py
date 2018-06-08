@@ -1,4 +1,5 @@
 from random import shuffle
+from premutation import Premutation
 
 #размерность задачи
 
@@ -29,5 +30,35 @@ def print_cube(cube):
 		print(']')
 	print('end', '='*12)
 
+def empty_vector(n):
+	return [0 for i in range(n)]
 
-print_cube(random_cube(5))
+def empty_square(n):
+	return [empty_vector(n) for i in range(n)]
+
+
+
+def d_matrix(cube):
+	n = len(cube)
+	pi = Premutation.random(n)
+	pi_rev = pi.reversed()
+	d = empty_square(n)
+	for j in range(n):
+		for k in range(n):
+			d[j][k] = cube[pi_rev[j+1]-1][j][k]
+	return d
+
+def signum(d):
+	js = []
+	for vector in d:
+		min_value = min(vector)
+		js.append((vector.index(min_value), min_value))
+	j, value = min(js, key=lambda x: x[1])
+
+
+c = random_cube(5)
+print_cube(c)
+d = d_matrix(c)
+for vector in d:
+	print(' '.join([str(i) for i in vector])) 
+
