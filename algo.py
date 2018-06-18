@@ -29,7 +29,7 @@ def random_cube(n):
 
 
 def empty_vector(n):
-    return [1 for i in range(n)]
+    return [randint(1,9) for i in range(n)]
 
 
 def empty_square(n):
