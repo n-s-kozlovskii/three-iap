@@ -1,0 +1,10 @@
+n = 10, f_mean = 14.61, nomal=1.461
+n = 20, f_mean = 35.48, normal=1.774
+n = 50, f_mean = 103.92, normal=2.0784
+n = 100, f_mean = 220.28, normal=2.2028
+n = 150, f_mean = 334.79, normal=2.2319
+n = 500, f_mean = 1126.03, normal=2.25206
+n = 1000, f_mean = 2253.39, normal=2.253
+n = 1250, f_mean = 2818.79, normal=2.255032
+n = 1500, f_mean = 3376.94  n=2.251293333
+n = 1750, f_mean = 3946.76 n=2.255291429
